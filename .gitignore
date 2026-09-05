@@ -1,0 +1,44 @@
+name: Run All GVU Agents
+
+on:
+  schedule:
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+
+jobs:
+  run-all-agents:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Run every gvu_*.py found in dated folders
+        run: |
+          for dir in */; do
+            for script in "$dir"gvu_*.py; do
+              [ -e "$script" ] || continue
+              echo "=== Running $script ==="
+              python "$script" || echo "!! $script failed, continuing"
+            done
+          done
+
+      - name: Commit any output changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --staged --quiet || git commit -m "Automated run: $(date -u +%F)"
+          git push
