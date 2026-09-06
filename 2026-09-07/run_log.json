@@ -1,0 +1,32 @@
+{
+  "sample": {
+    "age": 58,
+    "ac_dc_ratio": 0.28,
+    "pulse_arrival": 0.22,
+    "hr_var": 0.08
+  },
+  "history": [
+    {
+      "pass": 0,
+      "ok": false,
+      "reason": "age>=45 and ac_dc_ratio<0.40 cannot be labeled low; explanation must cite at least two of age, ac_dc_ratio, pulse_arrival, hr_var",
+      "draft": {
+        "risk_score": 0.27,
+        "label": "low",
+        "explanation": "Looks fine from pulse strength alone.",
+        "used_features": ["ac_dc_ratio"]
+      }
+    },
+    {
+      "pass": 1,
+      "ok": true,
+      "reason": "all four success criteria met",
+      "draft": {
+        "risk_score": 0.92,
+        "label": "high",
+        "explanation": "Age 58 and low ac_dc_ratio 0.28 raise prediabetes risk; pulse_arrival 0.22s and hr_var 0.08 corroborate.",
+        "used_features": ["age", "ac_dc_ratio", "pulse_arrival", "hr_var"]
+      }
+    }
+  ]
+}
