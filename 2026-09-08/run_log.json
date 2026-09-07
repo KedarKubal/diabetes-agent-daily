@@ -1,0 +1,8 @@
+{
+  "date": "2026-09-08",
+  "sample": {"mean": 105.9, "cv": 0.4, "tbr_pct": 26.67, "lbgi": 4.668, "last": 134, "expected": "high"},
+  "pass1_label": "low",
+  "final_label": "high",
+  "passes_run": 2,
+  "final_pass": true
+}
