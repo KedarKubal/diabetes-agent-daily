@@ -1,0 +1,11 @@
+{
+  "patient": {
+    "bmi": 33.4,
+    "homa_ir": 3.8,
+    "fto_risk_allele": false,
+    "baseline_hba1c": 7.6,
+    "steps_per_day": 3200,
+    "evening_snacks": true
+  },
+  "note": "pass 1 FAIL generic low-intensity; pass 2 PASS high intensity 180 MVPA / 3 resistance / 500 kcal deficit"
+}
