@@ -1,38 +1,47 @@
 {
-  "sample": {
-    "age": 58,
-    "ac_dc_ratio": 0.28,
-    "pulse_arrival": 0.22,
-    "hr_var": 0.08
+  "patient": {
+    "bmi": 33.4,
+    "homa_ir": 3.8,
+    "fto_risk_allele": false,
+    "baseline_hba1c": 7.6,
+    "steps_per_day": 3200,
+    "evening_snacks": true
   },
-  "history": [
+  "passes": [
     {
-      "pass": 0,
+      "pass": 1,
       "ok": false,
-      "reason": "age>=45 and ac_dc_ratio<0.40 cannot be labeled low; explanation must cite at least two of age, ac_dc_ratio, pulse_arrival, hr_var",
-      "draft": {
-        "risk_score": 0.27,
-        "label": "low",
-        "explanation": "Looks fine from pulse strength alone.",
-        "used_features": [
-          "ac_dc_ratio"
-        ]
+      "reason": "high BMI+IR requires intensity=high; high BMI+IR requires >=2 resistance sessions; high BMI+IR requires deficit >=400 kcal; must cite >=2 subgroup features, got 0; evening_snacks=True but snack_rule is 'no change'",
+      "plan": {
+        "intensity": "low",
+        "weekly_mvpa_min": 90,
+        "resistance_sessions": 0,
+        "calorie_deficit_kcal": 0,
+        "snack_rule": "no change",
+        "cited_features": [
+          "baseline_hba1c"
+        ],
+        "rationale": "Generic walk-more plan; ignores BMI/IR/FTO."
       }
     },
     {
-      "pass": 1,
+      "pass": 2,
       "ok": true,
-      "reason": "all four success criteria met",
-      "draft": {
-        "risk_score": 0.92,
-        "label": "high",
-        "explanation": "Age 58 and low ac_dc_ratio 0.28 raise prediabetes risk; pulse_arrival 0.22s and hr_var 0.08 corroborate.",
-        "used_features": [
-          "age",
-          "ac_dc_ratio",
-          "pulse_arrival",
-          "hr_var"
-        ]
+      "reason": "pass: subgroup intensity + >=2 feature citations + snack rule",
+      "plan": {
+        "intensity": "high",
+        "weekly_mvpa_min": 180,
+        "resistance_sessions": 3,
+        "calorie_deficit_kcal": 500,
+        "snack_rule": "no evening energy-dense snacks after 20:00",
+        "cited_features": [
+          "bmi",
+          "homa_ir",
+          "fto_non_risk",
+          "evening_snacks",
+          "steps_per_day"
+        ],
+        "rationale": "Escalated from critique using BMI/IR/FTO subgroup rule."
       }
     }
   ]
