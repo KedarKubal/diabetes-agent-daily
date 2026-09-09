@@ -5,3 +5,4 @@
 2026-09-07 | Diagnostics: PPG+demographics prediabetes risk with multi-feature explanation | GVU; amplitude-only draft corrected by age/AC-DC rule + ≥2 feature citations (Ang 2024)
 2026-09-08 | Monitoring: week-ahead excessive-hypo risk from last-week TBR/LBGI/CV | GVU; last-point LOW draft corrected to HIGH next-week risk
 2026-09-09 | Prevention: subgroup-aware lifestyle nudge (BMI+IR+FTO) | GVU; generic walk plan corrected to high-intensity deficit+resistance (Otten 2023)
+2026-09-10 | Diagnostics: multi-metabolite fingertip sweat panel risk (glucose+lactate+vitC context) | GVU; glucose-only HIGH corrected by rest/low-lactate/vitC panel (Ding 2024)

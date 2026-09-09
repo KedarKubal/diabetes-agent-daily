@@ -1,0 +1,37 @@
+{
+  "panel": {
+    "sweat_glucose_uM": 210,
+    "lactate_mM": 1.1,
+    "vitamin_c_uM": 12,
+    "activity_proxy": "rest",
+    "age": 58
+  },
+  "final": {
+    "risk": "HIGH",
+    "score": 0.95,
+    "rationale": "resting + low lactate + high glucose: upweight metabolic risk; low vitamin C: oxidative-stress co-signal; age >= 50"
+  },
+  "passed": true,
+  "passes": [
+    {
+      "pass": 1,
+      "draft": {
+        "risk": "HIGH",
+        "score": 0.82,
+        "rationale": "sweat glucose alone above 200 uM"
+      },
+      "passed": false,
+      "reason": "rationale cites glucose only; need multi-metabolite context"
+    },
+    {
+      "pass": 2,
+      "draft": {
+        "risk": "HIGH",
+        "score": 0.95,
+        "rationale": "resting + low lactate + high glucose: upweight metabolic risk; low vitamin C: oxidative-stress co-signal; age >= 50"
+      },
+      "passed": true,
+      "reason": "panel-consistent risk label"
+    }
+  ]
+}
