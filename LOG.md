@@ -7,3 +7,4 @@
 2026-09-09 | Prevention: subgroup-aware lifestyle nudge (BMI+IR+FTO) | GVU; generic walk plan corrected to high-intensity deficit+resistance (Otten 2023)
 2026-09-10 | Diagnostics: multi-metabolite fingertip sweat panel risk (glucose+lactate+vitC context) | GVU; glucose-only HIGH corrected by rest/low-lactate/vitC panel (Ding 2024)
 2026-09-11 | Monitoring: 7-hour nocturnal hypo risk from evening CGM slope+TB80+CV | GVU; last-point MEDIUM corrected to HIGH Night-Low flag (SmartGuide NLP / DA-CMTL safety-layer idea)
+2026-09-12 | Monitoring: explainable 60-min hypo/hyper flag with cited CGM+insulin+meal features (Duckworth SHAP-style) | GVU; last-point LOW corrected to HIGH/hypo when slope+bolus+meal-gap fire
