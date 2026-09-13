@@ -1,0 +1,26 @@
+{
+  "sample": {
+    "glucose_mgdl": [118, 104, 91, 82],
+    "heart_rate": [88, 90, 93, 96],
+    "steps_last_20min": 12,
+    "label": "HIGH_HYPO_RISK"
+  },
+  "passes": [
+    {
+      "pass": 1,
+      "ok": false,
+      "reason": "flag LOW_RISK != label HIGH_HYPO_RISK; missing=['heart', 'step', 'slope|delta']",
+      "flag": "LOW_RISK",
+      "rule": "IF last_glucose=82 >= 80 THEN LOW_RISK",
+      "features_cited": ["glucose"]
+    },
+    {
+      "pass": 2,
+      "ok": true,
+      "reason": "PASS: multimodal if-then rule matches labeled 30-min hypo risk",
+      "flag": "HIGH_HYPO_RISK",
+      "rule": "IF last_glucose=82 < 90 AND delta_glucose=-36 <= -20 AND heart_rate=96 >= 90 AND steps_last_20min=12 < 50 THEN HIGH_HYPO_RISK  # falling CGM + sympathetic HR + inactivity",
+      "features_cited": ["glucose", "slope", "heart_rate", "steps"]
+    }
+  ]
+}
