@@ -1,0 +1,15 @@
+{
+  "date": "2026-09-15",
+  "sample": {
+    "ppg_ac_dc": 0.42,
+    "pulse_bpm": 88.0,
+    "motion_rms": 0.15,
+    "last_meal_min": 40,
+    "reference_mgdl": 118.0
+  },
+  "before_mgdl": 200.6,
+  "before_zone": "C",
+  "after_mgdl": 133.2,
+  "after_zone": "A",
+  "passes": 2
+}
