@@ -11,3 +11,4 @@
 2026-09-13 | Prevention: AI-DPP composite-endpoint lifestyle plan (150 min + deficit + self-monitor) | GVU; generic walk-more draft corrected to JAMA-composite-aligned plan
 2026-09-14 | Monitoring: white-box if-then 30-min hypo using CGM+HR+steps (De La Cruz 2024 GE) | GVU; last-glucose LOW_RISK corrected to multimodal HIGH_HYPO_RISK rule
 2026-09-15 | Diagnostics: uncalibrated PPG glucose band + Clarke-zone safety layer (GlucoNet 2023) | GVU; meal-lag 200.6 Zone C corrected to meal-agnostic 133.2 Zone A
+2026-09-16 | Monitoring: week-ahead excessive-hypo via GRADE_hypo + waveform_length + TBR>4% (Cichosz 2024) | GVU; last-point LOW (118) corrected to HIGH citing TBR+WL
