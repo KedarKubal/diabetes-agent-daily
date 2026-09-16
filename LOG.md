@@ -12,3 +12,4 @@
 2026-09-14 | Monitoring: white-box if-then 30-min hypo using CGM+HR+steps (De La Cruz 2024 GE) | GVU; last-glucose LOW_RISK corrected to multimodal HIGH_HYPO_RISK rule
 2026-09-15 | Diagnostics: uncalibrated PPG glucose band + Clarke-zone safety layer (GlucoNet 2023) | GVU; meal-lag 200.6 Zone C corrected to meal-agnostic 133.2 Zone A
 2026-09-16 | Monitoring: week-ahead excessive-hypo via GRADE_hypo + waveform_length + TBR>4% (Cichosz 2024) | GVU; last-point LOW (118) corrected to HIGH citing TBR+WL
+2026-09-17 | Monitoring: week-ahead level-2 hypo RPM priority + night vs day wearable SHAP split (HR/HRV night) | GVU; last-point LOW (118) corrected to HIGH citing level2_run + night_HR/HRV
