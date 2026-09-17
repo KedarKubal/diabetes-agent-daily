@@ -13,3 +13,4 @@
 2026-09-15 | Diagnostics: uncalibrated PPG glucose band + Clarke-zone safety layer (GlucoNet 2023) | GVU; meal-lag 200.6 Zone C corrected to meal-agnostic 133.2 Zone A
 2026-09-16 | Monitoring: week-ahead excessive-hypo via GRADE_hypo + waveform_length + TBR>4% (Cichosz 2024) | GVU; last-point LOW (118) corrected to HIGH citing TBR+WL
 2026-09-17 | Monitoring: week-ahead level-2 hypo RPM priority + night vs day wearable SHAP split (HR/HRV night) | GVU; last-point LOW (118) corrected to HIGH citing level2_run + night_HR/HRV
+2026-09-18 | Prevention: GEM post-meal excursion plan (peak≤180, rise≤50) from pre-meal CGM+carbs | GVU; last-point LOW corrected to HIGH_THEN_MITIGATED 15g+30min walk

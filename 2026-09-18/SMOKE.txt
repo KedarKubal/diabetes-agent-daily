@@ -1,0 +1,2 @@
+pass 0 FAIL last-point peak=142 rise=0 LOW cite=pre_meal only
+pass 1 PASS planned peak=179 rise=37 HIGH_THEN_MITIGATED cite=pre_meal+slope+carb; 15g carb + 30 min walk
