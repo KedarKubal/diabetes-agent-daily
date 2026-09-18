@@ -1,0 +1,34 @@
+[
+  {
+    "pass": 0,
+    "passed": false,
+    "reason": "peak=142.0 (<=180? True); rise=0.0 (<=50? True); cited=['pre_meal_glucose'] missing=['carb_g', 'slope_15min'] cite_ok=False",
+    "draft": {
+      "predicted_peak_mgdl": 142.0,
+      "predicted_rise_mgdl": 0.0,
+      "risk": "LOW",
+      "nudge": "Current glucose looks fine. Eat as planned.",
+      "cited_features": [
+        "pre_meal_glucose"
+      ],
+      "notes": "pass-0 last-point only"
+    }
+  },
+  {
+    "pass": 1,
+    "passed": true,
+    "reason": "peak=179.0 (<=180? True); rise=37.0 (<=50? True); cited=['carb_g', 'pre_meal_glucose', 'slope_15min'] missing=[] cite_ok=True",
+    "draft": {
+      "predicted_peak_mgdl": 179.0,
+      "predicted_rise_mgdl": 37.0,
+      "risk": "HIGH_THEN_MITIGATED",
+      "nudge": "GEM nudge: cap this meal at ~15 g digestible carb (swap the rest for protein/veg) and walk 30 min after eating.",
+      "cited_features": [
+        "pre_meal_glucose",
+        "slope_15min",
+        "carb_g"
+      ],
+      "notes": "pass-revised GEM excursion model"
+    }
+  }
+]
