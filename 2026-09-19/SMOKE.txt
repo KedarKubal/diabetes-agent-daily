@@ -1,0 +1,3 @@
+BEFORE pass0: risk=LOW cited=['last_bg_mean']
+AFTER  pass1: risk=HIGH cited=['hypo_last3', 'delta_mean_bg', 'delta_sbp', 'last_sbp'] PASS=True
+nudge: Next-day hypo risk HIGH: 2 hypo-days in last 3, mean BG -22 mg/dL vs week start, SBP +14. Check BG before driving/exercise; keep fast carbs available; review meds with clinician.
