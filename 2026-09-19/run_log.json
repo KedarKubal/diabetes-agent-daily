@@ -3,14 +3,16 @@
     "pass": 0,
     "draft": {
       "risk": "LOW",
-      "cited_features": ["last_bg_mean"],
+      "cited_features": [
+        "last_bg_mean"
+      ],
       "nudge": "Last reading 118 looks fine. Keep usual routine.",
       "notes": "pass0 last-point only"
     },
     "verdict": {
       "pass": false,
       "reasons": [
-        "must cite >=1 BG-window feature AND >=1 BP feature",
+        "must cite \u22651 BG-window feature AND \u22651 BP feature",
         "window requires HIGH (hypo_last3=2, dBG=-22.3, dSBP=14.0)"
       ]
     },
@@ -27,13 +29,20 @@
     "pass": 1,
     "draft": {
       "risk": "HIGH",
-      "cited_features": ["hypo_last3", "delta_mean_bg", "delta_sbp", "last_sbp"],
+      "cited_features": [
+        "hypo_last3",
+        "delta_mean_bg",
+        "delta_sbp",
+        "last_sbp"
+      ],
       "nudge": "Next-day hypo risk HIGH: 2 hypo-days in last 3, mean BG -22 mg/dL vs week start, SBP +14. Check BG before driving/exercise; keep fast carbs available; review meds with clinician.",
       "notes": "revised from critique"
     },
     "verdict": {
       "pass": true,
-      "reasons": ["all criteria met"]
+      "reasons": [
+        "all criteria met"
+      ]
     },
     "features": {
       "last_bg_mean": 118,
