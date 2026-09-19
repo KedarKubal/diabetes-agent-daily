@@ -1,0 +1,42 @@
+[
+  {
+    "pass": 0,
+    "draft": {
+      "estimated_mgdl": 203.0,
+      "band": "HIGH",
+      "clarke_zone": "C",
+      "citations": ["amp_530"],
+      "rationale": "Single-channel green amplitude looks strong; draft HIGH glucose.",
+      "used_ratio": false,
+      "used_pav": false
+    },
+    "verifier": {
+      "pass": false,
+      "reasons": [
+        "missing amplitude_ratio citation/use",
+        "missing pav_ms citation/use",
+        "need >=2 feature citations",
+        "clarke_zone C not in A/B (unsafe)",
+        "HIGH band on euglycemic reference — likely amplitude-only over-read"
+      ],
+      "critique": "Use amplitude_ratio (530/1550) AND pav_ms together; re-estimate so Clarke zone is A/B vs last capillary."
+    }
+  },
+  {
+    "pass": 1,
+    "draft": {
+      "estimated_mgdl": 118.0,
+      "band": "IN_RANGE",
+      "clarke_zone": "A",
+      "citations": ["amp_530", "amp_1550", "amplitude_ratio", "pav_ms"],
+      "rationale": "Revised with dual-channel amplitude_ratio and PAV; est=118.0 mg/dL zone=A.",
+      "used_ratio": true,
+      "used_pav": true
+    },
+    "verifier": {
+      "pass": true,
+      "reasons": ["ok: ratio+PAV cited, Clarke A/B"],
+      "critique": "meets success criterion"
+    }
+  }
+]
