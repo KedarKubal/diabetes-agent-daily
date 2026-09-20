@@ -1,0 +1,3 @@
+BEFORE pass0: risk=LOW tags=['last_point_ok'] retrieved=none
+AFTER  pass1: risk=HIGH tags=['descending_run', 'high_cv', 'low_valley'] retrieved=win_steep_valley
+verifier_final_pass=True

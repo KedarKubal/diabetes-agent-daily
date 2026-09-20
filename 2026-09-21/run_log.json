@@ -1,0 +1,37 @@
+[
+  {
+    "pass": 0,
+    "draft": {
+      "risk": "LOW",
+      "tags": ["last_point_ok"],
+      "retrieved_id": "none",
+      "citations": ["last_glucose"],
+      "rationale": "Last CGM=92 mg/dL; draft LOW without morphology."
+    },
+    "verifier": {
+      "pass": false,
+      "reasons": [
+        "missing morphology tags: ['descending_run', 'high_cv', 'low_valley']",
+        "retrieved_id 'none' != 'win_steep_valley'",
+        "risk LOW != expected HIGH",
+        "need >=2 of slope_20min/min_glucose/cv/retrieved_id"
+      ],
+      "critique": "Name descending_run/low_valley/high_cv from slope/min/cv; retrieve matching library window; set HIGH if descent+valley."
+    }
+  },
+  {
+    "pass": 1,
+    "draft": {
+      "risk": "HIGH",
+      "tags": ["descending_run", "high_cv", "low_valley"],
+      "retrieved_id": "win_steep_valley",
+      "citations": ["slope_20min", "min_glucose", "cv", "retrieved_id"],
+      "rationale": "Morphology tags + retrieval after verifier critique."
+    },
+    "verifier": {
+      "pass": true,
+      "reasons": ["ok: morphology+retrieval consistent"],
+      "critique": "meets success criterion"
+    }
+  }
+]
