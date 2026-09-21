@@ -17,3 +17,4 @@
 2026-09-19 | Monitoring: next-day T2D hypo from 10-day BG+BP sequences | GVU; last-point LOW (118) corrected to HIGH citing hypo_last3+delta_mean_bg+delta_sbp
 2026-09-20 | Diagnostics: dual-channel PPG amplitude-ratio + PAV glucose band with Clarke A/B verifier | GVU; amp-only 203 Zone C corrected to 118 Zone A citing ratio+PAV
 2026-09-21 | Monitoring: GlyRAG-style CGM morphology tags + retrieval neighbor hypo flag | GVU; last-point LOW (92) corrected to HIGH citing descending_run+low_valley+high_cv+win_steep_valley
+2026-09-22 | Diagnostics: free-living multimodal glucose band from EDA tonic + circadian hour + sex, no food log (Chowdhury 2025) | GVU; last-CGM 118 IN_RANGE corrected to 141 citing EDA+hour+sex
