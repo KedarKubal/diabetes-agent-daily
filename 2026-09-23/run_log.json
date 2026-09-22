@@ -1,0 +1,26 @@
+{
+  "profile": {
+    "id": "P-0923",
+    "hba1c": 8.1,
+    "on_medication": true,
+    "meds": ["metformin 1000 mg BID"],
+    "activity_min_week": 40,
+    "logs_food": false,
+    "logs_meds": false,
+    "barrier": "forgets afternoon metformin; no written food record"
+  },
+  "passes": [
+    {
+      "pass": 0,
+      "plan_text": "HEADLINE: Try to eat better and walk more this week\nTARGET: healthier lifestyle\nDAILY_LOG: think about how the day went\nMED_CHECK: remember your tablets if you can\nACTIONS: be more active; cut sugar\nNOTES: generic first draft; no measurable self-monitor",
+      "verdict": {"pass": false}
+    },
+    {
+      "pass": 1,
+      "plan_text": "HEADLINE: Self-monitor metformin + carbs + steps; close the afternoon-dose gap\nTARGET: taking medication + carbohydrate logging\nDAILY_LOG: checkbox: metformin taken 08:00 and 20:00; write carb-grams at each meal; step-count at bedtime (target 8000)\nMED_CHECK: two-tick self-check for metformin 1000 mg BID \u2014 miss = same-day catch-up rule + note why\nACTIONS: walk 30 minutes after the largest meal on 5 of 7 days; cap dinner starch at 45 g carbohydrate, logged before eating; bedtime review of the three checkboxes (meds / carbs / steps)\nNOTES: revised after pass critique",
+      "verdict": {"pass": true}
+    }
+  ],
+  "final_pass": true,
+  "n_passes": 2
+}
