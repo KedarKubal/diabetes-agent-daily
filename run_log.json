@@ -1,48 +1,66 @@
 {
-  "patient": {
-    "bmi": 33.4,
-    "homa_ir": 3.8,
-    "fto_risk_allele": false,
-    "baseline_hba1c": 7.6,
-    "steps_per_day": 3200,
-    "evening_snacks": true
+  "sample": {
+    "last_cgm_mgdl": 118.0,
+    "eda_tonic_us": 4.6,
+    "hour_local": 6,
+    "sex": "M",
+    "ppg_hr_bpm": 78.0
   },
   "passes": [
     {
-      "pass": 1,
-      "ok": false,
-      "reason": "high BMI+IR requires intensity=high; high BMI+IR requires >=2 resistance sessions; high BMI+IR requires deficit >=400 kcal; must cite >=2 subgroup features, got 0; evening_snacks=True but snack_rule is 'no change'",
-      "plan": {
-        "intensity": "low",
-        "weekly_mvpa_min": 90,
-        "resistance_sessions": 0,
-        "calorie_deficit_kcal": 0,
-        "snack_rule": "no change",
-        "cited_features": [
-          "baseline_hba1c"
+      "pass": 0,
+      "candidate": {
+        "band": "IN_RANGE",
+        "est_mgdl": 118.0,
+        "cited": [
+          "last_cgm"
         ],
-        "rationale": "Generic walk-more plan; ignores BMI/IR/FTO."
+        "rationale": "Naive last-point snapshot; ignores wearable context.",
+        "used_food_log": false
+      },
+      "critique": {
+        "passed": false,
+        "reasons": [
+          "FAIL: did not cite EDA tonic (paper's top wearable predictor).",
+          "FAIL: did not cite circadian hour.",
+          "FAIL: did not cite biological sex.",
+          "FAIL: estimate 118.0 ignores multimodal shift (expected ~141.0)."
+        ]
       }
     },
     {
-      "pass": 2,
-      "ok": true,
-      "reason": "pass: subgroup intensity + >=2 feature citations + snack rule",
-      "plan": {
-        "intensity": "high",
-        "weekly_mvpa_min": 180,
-        "resistance_sessions": 3,
-        "calorie_deficit_kcal": 500,
-        "snack_rule": "no evening energy-dense snacks after 20:00",
-        "cited_features": [
-          "bmi",
-          "homa_ir",
-          "fto_non_risk",
-          "evening_snacks",
-          "steps_per_day"
+      "pass": 1,
+      "candidate": {
+        "band": "IN_RANGE",
+        "est_mgdl": 141.0,
+        "cited": [
+          "eda_tonic",
+          "circadian_hour",
+          "sex",
+          "last_cgm"
         ],
-        "rationale": "Escalated from critique using BMI/IR/FTO subgroup rule."
+        "rationale": "Adjusted last CGM 118.0 by EDA tonic 4.6 \u00b5S, hour 6, sex M.",
+        "used_food_log": false
+      },
+      "critique": {
+        "passed": true,
+        "reasons": [
+          "PASS: multimodal, no food log, cited EDA+hour+sex."
+        ]
       }
     }
-  ]
+  ],
+  "final": {
+    "band": "IN_RANGE",
+    "est_mgdl": 141.0,
+    "cited": [
+      "eda_tonic",
+      "circadian_hour",
+      "sex",
+      "last_cgm"
+    ],
+    "rationale": "Adjusted last CGM 118.0 by EDA tonic 4.6 \u00b5S, hour 6, sex M.",
+    "used_food_log": false
+  },
+  "final_passed": true
 }
