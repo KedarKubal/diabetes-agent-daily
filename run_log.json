@@ -1,66 +1,65 @@
 {
-  "sample": {
-    "last_cgm_mgdl": 118.0,
-    "eda_tonic_us": 4.6,
-    "hour_local": 6,
-    "sex": "M",
-    "ppg_hr_bpm": 78.0
+  "profile": {
+    "id": "P-0923",
+    "hba1c": 8.1,
+    "on_medication": true,
+    "meds": [
+      "metformin 1000 mg BID"
+    ],
+    "activity_min_week": 40,
+    "logs_food": false,
+    "logs_meds": false,
+    "barrier": "forgets afternoon metformin; no written food record"
   },
   "passes": [
     {
       "pass": 0,
-      "candidate": {
-        "band": "IN_RANGE",
-        "est_mgdl": 118.0,
-        "cited": [
-          "last_cgm"
+      "plan": {
+        "headline": "Try to eat better and walk more this week",
+        "target_behaviour": "healthier lifestyle",
+        "daily_log": "think about how the day went",
+        "medication_check": "remember your tablets if you can",
+        "concrete_actions": [
+          "be more active",
+          "cut sugar"
         ],
-        "rationale": "Naive last-point snapshot; ignores wearable context.",
-        "used_food_log": false
+        "notes": "generic first draft; no measurable self-monitor"
       },
-      "critique": {
-        "passed": false,
+      "plan_text": "HEADLINE: Try to eat better and walk more this week\nTARGET: healthier lifestyle\nDAILY_LOG: think about how the day went\nMED_CHECK: remember your tablets if you can\nACTIONS: be more active; cut sugar\nNOTES: generic first draft; no measurable self-monitor",
+      "verdict": {
+        "pass": false,
         "reasons": [
-          "FAIL: did not cite EDA tonic (paper's top wearable predictor).",
-          "FAIL: did not cite circadian hour.",
-          "FAIL: did not cite biological sex.",
-          "FAIL: estimate 118.0 ignores multimodal shift (expected ~141.0)."
-        ]
+          "FAIL self-monitor: daily_log must name a measurable behaviour with a numeric field",
+          "FAIL concrete action: need at least one time- or gram-bounded action",
+          "FAIL target: target_behaviour is too vague (not a BCT-grade behaviour)"
+        ],
+        "criterion": "Plan must (a) name a measurable target behaviour with a numeric daily log, (b) include a timed medication self-check when the profile is on meds, (c) include \u22651 concrete minutes-or-grams action. Grounded in Moschonis 2024 self-monitoring-of-behaviour + taking-medication BCTs."
       }
     },
     {
       "pass": 1,
-      "candidate": {
-        "band": "IN_RANGE",
-        "est_mgdl": 141.0,
-        "cited": [
-          "eda_tonic",
-          "circadian_hour",
-          "sex",
-          "last_cgm"
+      "plan": {
+        "headline": "Self-monitor metformin + carbs + steps; close the afternoon-dose gap",
+        "target_behaviour": "taking medication + carbohydrate logging",
+        "daily_log": "checkbox: metformin taken 08:00 and 20:00; write carb-grams at each meal; step-count at bedtime (target 8000)",
+        "medication_check": "two-tick self-check for metformin 1000 mg BID \u2014 miss = same-day catch-up rule + note why",
+        "concrete_actions": [
+          "walk 30 minutes after the largest meal on 5 of 7 days",
+          "cap dinner starch at 45 g carbohydrate, logged before eating",
+          "bedtime review of the three checkboxes (meds / carbs / steps)"
         ],
-        "rationale": "Adjusted last CGM 118.0 by EDA tonic 4.6 \u00b5S, hour 6, sex M.",
-        "used_food_log": false
+        "notes": "revised after pass critique (len=226)"
       },
-      "critique": {
-        "passed": true,
+      "plan_text": "HEADLINE: Self-monitor metformin + carbs + steps; close the afternoon-dose gap\nTARGET: taking medication + carbohydrate logging\nDAILY_LOG: checkbox: metformin taken 08:00 and 20:00; write carb-grams at each meal; step-count at bedtime (target 8000)\nMED_CHECK: two-tick self-check for metformin 1000 mg BID \u2014 miss = same-day catch-up rule + note why\nACTIONS: walk 30 minutes after the largest meal on 5 of 7 days; cap dinner starch at 45 g carbohydrate, logged before eating; bedtime review of the three checkboxes (meds / carbs / steps)\nNOTES: revised after pass critique (len=226)",
+      "verdict": {
+        "pass": true,
         "reasons": [
-          "PASS: multimodal, no food log, cited EDA+hour+sex."
-        ]
+          "all three success criteria met"
+        ],
+        "criterion": "Plan must (a) name a measurable target behaviour with a numeric daily log, (b) include a timed medication self-check when the profile is on meds, (c) include \u22651 concrete minutes-or-grams action. Grounded in Moschonis 2024 self-monitoring-of-behaviour + taking-medication BCTs."
       }
     }
   ],
-  "final": {
-    "band": "IN_RANGE",
-    "est_mgdl": 141.0,
-    "cited": [
-      "eda_tonic",
-      "circadian_hour",
-      "sex",
-      "last_cgm"
-    ],
-    "rationale": "Adjusted last CGM 118.0 by EDA tonic 4.6 \u00b5S, hour 6, sex M.",
-    "used_food_log": false
-  },
-  "final_passed": true
+  "final_pass": true,
+  "n_passes": 2
 }
