@@ -1,0 +1,3 @@
+BEFORE: Last reading is 64 mg/dL. Take carbs and recheck.
+AFTER:  Overnight risk is UNSAFE. Last=64 mg/dL, min=64, TBR=28.6%, descending_run=6 steps.
+PASSES: True label: UNSAFE

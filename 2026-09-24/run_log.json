@@ -1,0 +1,7 @@
+{
+  "question": "Am I safe overnight?",
+  "final_label": "UNSAFE",
+  "final_answer": "Overnight risk is UNSAFE. Last=64 mg/dL, min=64, TBR=28.6%, descending_run=6 steps. Have 15g fast carb available and set a 02:00 check.",
+  "passed": true,
+  "before": "Last reading is 64 mg/dL. Take carbs and recheck."
+}
