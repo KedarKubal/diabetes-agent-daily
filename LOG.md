@@ -20,3 +20,4 @@
 2026-09-22 | Diagnostics: free-living multimodal glucose band from EDA tonic + circadian hour + sex, no food log (Chowdhury 2025) | GVU; last-CGM 118 IN_RANGE corrected to 141 citing EDA+hour+sex
 2026-09-23 | Prevention: BCT-grade weekly plan requiring self-monitoring-of-behaviour + timed med check (Moschonis 2024) | GVU; vague lifestyle draft corrected to metformin ticks + carb-grams + 30 min post-meal walk
 2026-09-24 | Monitoring: conversational overnight-safety answer that must cite TBR+descending_run (LLM-CGM 2024) | GVU; last-point draft failed citations then revised to UNSAFE TBR=28.6%
+2026-09-25 | Monitoring: time-to-hypoglycemia bins from CGM slope + HR (Onwuchekwa EMBC 2024) | GVU; last-point LOW/no-bin corrected to HIGH time_bin=0-30 citing slope=-7.4 and HR=96

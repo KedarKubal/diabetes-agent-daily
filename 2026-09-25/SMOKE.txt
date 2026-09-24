@@ -1,0 +1,1 @@
+before_time_bin=None after_time_bin=0-30 final=True

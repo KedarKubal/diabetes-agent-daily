@@ -1,0 +1,28 @@
+[
+  {
+    "pass": 1,
+    "ok": false,
+    "reason": "FAIL: missing citations ['cgm_slope_mgdl_per_5min', 'heart_rate_bpm', 'time_bin']; expected bin=0-30",
+    "draft": {
+      "risk": "LOW",
+      "time_bin": null,
+      "cited": ["last_cgm"],
+      "last_cgm": 81,
+      "note": "Draft from last CGM only; no time-to-event."
+    }
+  },
+  {
+    "pass": 2,
+    "ok": true,
+    "reason": "PASS: time_bin=0-30 matches slope+HR rule; citations complete",
+    "draft": {
+      "risk": "HIGH",
+      "time_bin": "0-30",
+      "cited": ["time_bin", "cgm_slope_mgdl_per_5min", "heart_rate_bpm"],
+      "last_cgm": 81,
+      "cgm_slope_mgdl_per_5min": -7.4,
+      "heart_rate_bpm": 96.0,
+      "note": "Revised after critique"
+    }
+  }
+]
