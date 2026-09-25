@@ -6,7 +6,9 @@
     "draft": {
       "risk": "LOW",
       "time_bin": null,
-      "cited": ["last_cgm"],
+      "cited": [
+        "last_cgm"
+      ],
       "last_cgm": 81,
       "note": "Draft from last CGM only; no time-to-event."
     }
@@ -18,11 +20,15 @@
     "draft": {
       "risk": "HIGH",
       "time_bin": "0-30",
-      "cited": ["time_bin", "cgm_slope_mgdl_per_5min", "heart_rate_bpm"],
+      "cited": [
+        "time_bin",
+        "cgm_slope_mgdl_per_5min",
+        "heart_rate_bpm"
+      ],
       "last_cgm": 81,
       "cgm_slope_mgdl_per_5min": -7.4,
       "heart_rate_bpm": 96.0,
-      "note": "Revised after critique"
+      "note": "Revised after critique: FAIL: missing citations ['cgm_slope_mgdl_per_5min', 'heart_rate_bpm', 'time_bin'"
     }
   }
 ]
