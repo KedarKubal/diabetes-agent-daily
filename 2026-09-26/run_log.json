@@ -1,0 +1,53 @@
+[
+  {
+    "pass": 1,
+    "ok": false,
+    "reason": "need >=3 named habits, got 0; need >=3 habits with cue+frequency, got 0; weekly_habit_quota must be >=10, got 0",
+    "plan": {
+      "summary": "Walk more and eat healthier this week.",
+      "habits": [],
+      "weekly_habit_quota": 0,
+      "notes": [
+        "first draft: last-point / slogan style"
+      ]
+    }
+  },
+  {
+    "pass": 2,
+    "ok": true,
+    "reason": "pass: 4 cue-bound habits, quota=29",
+    "plan": {
+      "summary": "High-adherence digital+group week: cue-bound habits totaling 29 ticks (Stop-Diabetes adherence lever).",
+      "habits": [
+        {
+          "name": "post_meal_walk",
+          "cue": "immediately after lunch and dinner",
+          "weekly_freq": 12,
+          "reward": "tick habit counter + 10 min TIR log"
+        },
+        {
+          "name": "veg_first_plate",
+          "cue": "sit down to any meal",
+          "weekly_freq": 14,
+          "reward": "habit tick before first bite"
+        },
+        {
+          "name": "evening_group_or_app_session",
+          "cue": "20:00 phone alarm on Mon/Wed",
+          "weekly_freq": 2,
+          "reward": "session logged toward 5-of-6 quota"
+        },
+        {
+          "name": "waist_self_measure",
+          "cue": "Sunday morning after shower",
+          "weekly_freq": 1,
+          "reward": "cm recorded in app"
+        }
+      ],
+      "weekly_habit_quota": 29,
+      "notes": [
+        "revised after verifier: countable habits + quota"
+      ]
+    }
+  }
+]

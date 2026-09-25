@@ -1,0 +1,4 @@
+SMOKE 2026-09-26 habit-adherence GVU
+before: summary='Walk more and eat healthier this week.' ok=False (need >=3 named habits, got 0; need >=3 habits with cue+frequency, got 0; weekly_habit_quota must be >=10, got 0)
+after:  summary='High-adherence digital+group week: cue-bound habits totaling 29 ticks (Stop-Diabetes adherence lever).' ok=True (pass: 4 cue-bound habits, quota=29)
+passes=2 quota=29
