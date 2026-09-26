@@ -1,0 +1,30 @@
+[
+  {
+    "pass": 0,
+    "draft": {
+      "risk": "LOW",
+      "soft_score": 0.0,
+      "cites": ["last_glucose"],
+      "note": "last=72.0>=70 hard LOW",
+      "pass_idx": 0
+    },
+    "passed": false,
+    "reasons": [
+      "boundary last=72.0 needs score in [0.35,0.65] got 0.0",
+      "boundary needs MEDIUM got LOW",
+      "missing cite slope"
+    ]
+  },
+  {
+    "pass": 1,
+    "draft": {
+      "risk": "MEDIUM",
+      "soft_score": 0.532,
+      "cites": ["last_glucose", "slope"],
+      "note": "soft last=72.0 slope=-4.00 n_below=0",
+      "pass_idx": 1
+    },
+    "passed": true,
+    "reasons": []
+  }
+]

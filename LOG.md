@@ -22,3 +22,4 @@
 2026-09-24 | Monitoring: conversational overnight-safety answer that must cite TBR+descending_run (LLM-CGM 2024) | GVU; last-point draft failed citations then revised to UNSAFE TBR=28.6%
 2026-09-25 | Monitoring: time-to-hypoglycemia bins from CGM slope + HR (Onwuchekwa EMBC 2024) | GVU; last-point LOW/no-bin corrected to HIGH time_bin=0-30 citing slope=-7.4 and HR=96
 2026-09-26 | Prevention: habit-countable digital+group plan with weekly quota (Stop Diabetes / Lakka 2023) | GVU; slogan draft corrected to 4 cue-bound habits, quota=29
+2026-09-27 | Monitoring: soft-label 65-75 mg/dL hypo boundary score (MT-HypoNet 2026) | GVU; last-point LOW/0.0 at 72 corrected to MEDIUM/0.532 citing last+slope

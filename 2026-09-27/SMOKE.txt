@@ -1,0 +1,3 @@
+BEFORE pass0: risk=LOW score=0.0 cites=['last_glucose']
+AFTER  pass1: risk=MEDIUM score=0.532 cites=['last_glucose', 'slope']
+verifier_passed=True reasons=[]
